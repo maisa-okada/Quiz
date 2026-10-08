@@ -36,5 +36,6 @@ function mostraPergunta() {
   perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
 }
+function mostraAlternativa ( ) { }
 
 mostraPergunta();
