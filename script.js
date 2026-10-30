@@ -4,8 +4,11 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const pergunta1 = "Pergunta 1";
-const pergunta2 = "Pergunta 2";
+const pergunta1 = "O que significa a sigla IA no contexto da tecnologia?";
+const pergunta2 = "Qual das seguintes alternativas é um exemplo de IA generativa capaz de criar textos e responder a comandos?";
+const pergunta3 = "
+const pergunta4 = "
+const pergunta5 = "
 const perguntas = [
   {
     enunciado: "Pergunta 1",
