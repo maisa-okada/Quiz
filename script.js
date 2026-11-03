@@ -37,8 +37,13 @@ let perguntaAtual;
 let hitoriaFinal = "";
 
 function mostraPergunta() {
+  if (atual >= perguntas.length) {
+    mostraResultado();
+    return;
+  }
   perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
+  caixaAlternativas.textContent = "";
   mostraAlternativas();
 }
 
@@ -60,5 +65,17 @@ function respostaSelecionada(opcaoSelecionada) {
   atual++;
   mostraPergunta();
 }
-mostraPergunta();
 
+function mostraResultado() {
+  caixaPerguntas.textContent = "E assim...";
+  textoResultado.textContent = "Parabéns por concluir o nosso quiz! 🤖✨ A Inteligência Artificial já deixou de ser uma promessa do futuro ou uma exclusividade das telas de cinema para se tornar parte fundamental da nossa rotina. Como vimos ao longo das perguntas, ela atende pela sigla de Inteligência Artificial e se manifesta de formas que muitas vezes nem percebemos. Seja quando o corretor ortográfico do seu celular prevê a sua próxima palavra, quando plataformas como a Netflix e o Spotify escolhem a trilha sonora ou o filme perfeito para o seu descanso, ou quando você interage com tecnologias generativas inovadoras como o ChatGPT para criar textos e tirar dúvidas em segundos. E embora ainda não tenhamos uma armadura voadora controlada pelo J.A.R.V.I.S. à nossa disposição, as ferramentas reais de IA já transformam a nossa produtividade e o nosso lazer todos os dias. O objetivo deste quiz foi mostrar que a IA não é um bicho de sete cabeças, mas sim uma tecnologia feita para somar e facilitar a nossa vida. Continue explorando, testando esses novos recursos e usando a tecnologia a seu favor!\n\nAté a próxima descoberta tecnológica! 👋🚀";
+  caixaAlternativas.textContent = "";
+}
+
+let historiaFinal = "";
+function respostaSelecionada(opcaoSelecionada) {
+  const afirmacao = opcaoSelecionada.afirmacao;
+  historiaFinal += afirmacao + " ";
+  atual++;
+  mostraPergunta();
+}
