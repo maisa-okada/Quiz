@@ -6,29 +6,29 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const pergunta1 = "O que significa a sigla IA no contexto da tecnologia?";
 const pergunta2 = "Qual das seguintes alternativas é um exemplo de IA generativa capaz de criar textos e responder a comandos?";
-const pergunta3 = "
-const pergunta4 = "
-const pergunta5 = "
+const pergunta3 = "Muitas pessoas usam IA no celular sem notar. Qual destas funções comuns usa Inteligência Artificial para facilitar o dia a dia?";
+const pergunta4 = "No cinema, qual destes personagens famosos é uma Inteligência Artificial que controla uma armadura de super-herói?";
+const pergunta5 = "Grandes plataformas usam IA para descobrir o que você gosta. Qual destes serviços usa algoritmos para recomendar sua próxima música ou filme?";
 const perguntas = [
   {
-    enunciado: "Pergunta 1",
-    alternativas: ["Alternativa 1", "Alternativa 2"],
+    enunciado: "O que significa a sigla IA no contexto da tecnologia?",
+    alternativas: ["A) Internet Avançada", "B) Inteligêngia Artificial"],
   },
   {
-    enunciado: "Pergunta 2",
-    alternativas: ["Alternativa 1", "Alternativa 2"],
+    enunciado: "Qual das seguintes alternativas é um exemplo de IA generativa capaz de criar textos e responder a comandos?",
+    alternativas: ["A) ChatGPT", "B) Google Drive"],
   },
    {
-    enunciado: "Pergunta 3",
-    alternativas: ["Alternativa 1", "Alternativa 2"],
+    enunciado: "Muitas pessoas usam IA no celular sem notar. Qual destas funções comuns usa Inteligência Artificial para facilitar o dia a dia?",
+    alternativas: ["A) O corretor ortográfico que prevê a próxima palavra que você vai digitar", "B) O alarme do relógio que toca de manhã"],
   },
    {
-    enunciado: "Pergunta 4",
-    alternativas: ["Alternativa 1", "Alternativa 2"],
+    enunciado: "No cinema, qual destes personagens famosos é uma Inteligência Artificial que controla uma armadura de super-herói?",
+    alternativas: ["A) J.A.R.V.I.S. (do Homem de Ferro)", "B) R2-D2 (de Star Wars)"],
   },
    {
-    enunciado: "Pergunta 5",
-    alternativas: ["Alternativa 1", "Alternativa 2"],
+    enunciado: 0"Grandes plataformas usam IA para descobrir o que você gosta. Qual destes serviços usa algoritmos para recomendar sua próxima música ou filme?",
+    alternativas: ["A) Calculadora do celular", "B) Netflix e Spotify"],
   },
 ];
 
