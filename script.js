@@ -12,23 +12,33 @@ const pergunta5 = "Grandes plataformas usam IA para descobrir o que você gosta.
 const perguntas = [
   {
     enunciado: "O que significa a sigla IA no contexto da tecnologia?",
-    alternativas: ["A) Internet Avançada", "B) Inteligêngia Artificial"],
+    alternativas: [
+      {
+        afirmacao: "A) Internet Avançada", texto: "B) Inteligêngia Artificial"],
   },
   {
     enunciado: "Qual das seguintes alternativas é um exemplo de IA generativa capaz de criar textos e responder a comandos?",
-    alternativas: ["A) ChatGPT", "B) Google Drive"],
+    alternativas: [
+      {
+        afirmacao: "A) ChatGPT", texto: "B) Google Drive"],
   },
    {
     enunciado: "Muitas pessoas usam IA no celular sem notar. Qual destas funções comuns usa Inteligência Artificial para facilitar o dia a dia?",
-    alternativas: ["A) O corretor ortográfico que prevê a próxima palavra que você vai digitar", "B) O alarme do relógio que toca de manhã"],
+    alternativas: [
+      {
+        afirmacao: "A) O corretor ortográfico que prevê a próxima palavra que você vai digitar", texto: "B) O alarme do relógio que toca de manhã"],
   },
    {
     enunciado: "No cinema, qual destes personagens famosos é uma Inteligência Artificial que controla uma armadura de super-herói?",
-    alternativas: ["A) J.A.R.V.I.S. (do Homem de Ferro)", "B) R2-D2 (de Star Wars)"],
+    alternativas: [
+      {
+        texto: "A) R2-D2 (de Star Wars)", afirmacao: "B) A) J.A.R.V.I.S. (do Homem de Ferro)"],
   },
    {
     enunciado: 0"Grandes plataformas usam IA para descobrir o que você gosta. Qual destes serviços usa algoritmos para recomendar sua próxima música ou filme?",
-    alternativas: ["A) Calculadora do celular", "B) Netflix e Spotify"],
+    alternativas: [
+      {
+        texto: "A) Calculadora do celular", afirmacao: "B) Netflix e Spotify"],
   },
 ];
 
