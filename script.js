@@ -4,43 +4,48 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const pergunta1 = "O que significa a sigla IA no contexto da tecnologia?";
-const pergunta2 = "Qual das seguintes alternativas é um exemplo de IA generativa capaz de criar textos e responder a comandos?";
-const pergunta3 = "Muitas pessoas usam IA no celular sem notar. Qual destas funções comuns usa Inteligência Artificial para facilitar o dia a dia?";
-const pergunta4 = "No cinema, qual destes personagens famosos é uma Inteligência Artificial que controla uma armadura de super-herói?";
-const pergunta5 = "Grandes plataformas usam IA para descobrir o que você gosta. Qual destes serviços usa algoritmos para recomendar sua próxima música ou filme?";
-const perguntas = [
-  {
-    enunciado: "O que significa a sigla IA no contexto da tecnologia?",
-    alternativas: [
-      {
-        afirmacao: "A) Internet Avançada", texto: "B) Inteligêngia Artificial"],
-  },
-  {
-    enunciado: "Qual das seguintes alternativas é um exemplo de IA generativa capaz de criar textos e responder a comandos?",
-    alternativas: [
-      {
-        afirmacao: "A) ChatGPT", texto: "B) Google Drive"],
-  },
-   {
-    enunciado: "Muitas pessoas usam IA no celular sem notar. Qual destas funções comuns usa Inteligência Artificial para facilitar o dia a dia?",
-    alternativas: [
-      {
-        afirmacao: "A) O corretor ortográfico que prevê a próxima palavra que você vai digitar", texto: "B) O alarme do relógio que toca de manhã"],
-  },
-   {
-    enunciado: "No cinema, qual destes personagens famosos é uma Inteligência Artificial que controla uma armadura de super-herói?",
-    alternativas: [
-      {
-        texto: "A) R2-D2 (de Star Wars)", afirmacao: "B) A) J.A.R.V.I.S. (do Homem de Ferro)"],
-  },
-   {
-    enunciado: 0"Grandes plataformas usam IA para descobrir o que você gosta. Qual destes serviços usa algoritmos para recomendar sua próxima música ou filme?",
-    alternativas: [
-      {
-        texto: "A) Calculadora do celular", afirmacao: "B) Netflix e Spotify"],
-  },
-];
+const pergunta1 = "Você acorda no ano de 2040 e percebe que sua casa está totalmente automatizada por uma Inteligência Artificial. Qual é a sua primeira reação com essa nova rotina?";
+const pergunta2 = "Na escola ou no trabalho, você precisa entregar um projeto complexo até o fim do dia. Como decide utilizar as IAs generativas disponíveis?";
+const pergunta3 = "No tempo livre, você percebe que os algoritmos de recomendação do Spotify e da Netflix conhecem seus gostos perfeitamente. O que você faz?";
+const pergunta4 = "Em uma feira de tecnologia, você vê uma armadura inteligente com um assistente virtual integrado (estilo J.A.R.V.I.S.). Qual o seu pensamento sobre o futuro da robótica?";
+const pergunta5 = "No fim das contas, você precisa definir o papel da Inteligência Artificial no mundo. Qual caminho você defende?";
+const perguntas = [ 
+    { 
+        enunciado: "Você acorda no ano de 2040 e percebe que sua casa está totalmente automatizada por uma Inteligência Artificial. Qual é a sua primeira reação com essa nova rotina?", 
+        alternativas: [ 
+            { texto: "A) Fico empolgado e decido explorar todas as ferramentas de IA para facilitar o meu dia.", afirmacao: "Você começou sua jornada entusiasmado com o potencial da tecnologia, integrando ferramentas inteligentes na sua rotina diária." }, 
+            { texto: "B) Fico desconfiado e prefiro desativar os recursos automáticos para manter o controle manual.", afirmacao: "No início, você adotou uma postura cautelosa, preferindo a segurança do controle manual e o questionamento sobre a privacidade." } 
+        ], 
+    }, 
+    { 
+        enunciado: "Na escola ou no trabalho, você precisa entregar um projeto complexo até o fim do dia. Como decide utilizar as IAs generativas disponíveis?", 
+        alternativas: [ 
+            { texto: "A) Uso ferramentas como o ChatGPT para criar a base do texto, otimizar dados e acelerar a produção.", afirmacao: "Diante dos desafios, você usou sistemas generativos para impulsionar sua produtividade e economizar tempo." }, 
+            { texto: "B) Prefiro fazer tudo sozinho e uso a IA apenas no final para revisar a gramática e corrigir erros.", afirmacao: "Valorizando a criação puramente humana, você usou algoritmos apenas como um suporte técnico de revisão." } 
+        ], 
+    }, 
+    { 
+        enunciado: "No tempo livre, você percebe que os algoritmos de recomendação do Spotify e da Netflix conhecem seus gostos perfeitamente. O que você faz?", 
+        alternativas: [ 
+            { texto: "A) Sigo as sugestões da tela, confiando no sistema para descobrir novas músicas e filmes.", afirmacao: "Na hora do lazer, permitiu que os algoritmos de recomendação expandissem seus horizontes culturais." }, 
+            { texto: "B) Ignoro a lista automática e busco indicações diretamente com amigos e criadores independentes.", afirmacao: "Nas pausas, preferiu a curadoria humana e o boca a boca, evitando ficar preso em uma bolha de algoritmos." } 
+        ], 
+    }, 
+    { 
+        enunciado: "Em uma feira de tecnologia, você vê uma armadura inteligente com um assistente virtual integrado (estilo J.A.R.V.I.S.). Qual o seu pensamento sobre o futuro da robótica?", 
+        alternativas: [ 
+            { texto: "A) Acho incrível! Acredito que robôs e humanos vão trabalhar juntos para resolver grandes problemas.", afirmacao: "Sua visão de futuro é optimista, enxergando robôs avançados como parceiros fundamentais da humanidade." }, 
+            { texto: "B) Fico preocupado com a segurança e o impacto que esses assistentes autônomos podem causar.", afirmacao: "Seu olhar sobre o futuro traz uma preocupação ética importante sobre os limites e a segurança da automação extrema." } 
+        ], 
+    }, 
+    { 
+        enunciado: "No fim das contas, você precisa definir o papel da Inteligência Artificial no mundo. Qual caminho você defende?", 
+        alternativas: [ 
+            { texto: "A) Defendo o avanço rápido da IA, pois ela é a chave para a evolução da medicina, ciência e educação.", afirmacao: "Por fim, você escolheu apoiar a aceleração tecnológica como o motor principal do progresso científico." }, 
+            { texto: "B) Defendo regras rígidas e limites claros para que a IA nunca substitua a criatividade e os empregos humanos.", afirmacao: "Por fim, você decidiu levantar a bandeira da regulamentação, priorizando o bem-estar social e a essência humana." } 
+        ], 
+    }, 
+]; 
 
 let atual = 0;
 let perguntaAtual;
@@ -76,11 +81,14 @@ function respostaSelecionada(opcaoSelecionada) {
   mostraPergunta();
 }
 
-function mostraResultado() {
-  caixaPerguntas.textContent = "E assim...";
-  textoResultado.textContent = "Parabéns por concluir o nosso quiz! 🤖✨ A Inteligência Artificial já deixou de ser uma promessa do futuro ou uma exclusividade das telas de cinema para se tornar parte fundamental da nossa rotina. Como vimos ao longo das perguntas, ela atende pela sigla de Inteligência Artificial e se manifesta de formas que muitas vezes nem percebemos. Seja quando o corretor ortográfico do seu celular prevê a sua próxima palavra, quando plataformas como a Netflix e o Spotify escolhem a trilha sonora ou o filme perfeito para o seu descanso, ou quando você interage com tecnologias generativas inovadoras como o ChatGPT para criar textos e tirar dúvidas em segundos. E embora ainda não tenhamos uma armadura voadora controlada pelo J.A.R.V.I.S. à nossa disposição, as ferramentas reais de IA já transformam a nossa produtividade e o nosso lazer todos os dias. O objetivo deste quiz foi mostrar que a IA não é um bicho de sete cabeças, mas sim uma tecnologia feita para somar e facilitar a nossa vida. Continue explorando, testando esses novos recursos e usando a tecnologia a seu favor!\n\nAté a próxima descoberta tecnológica! 👋🚀";
-  caixaAlternativas.textContent = "";
+function mostraResultado() { 
+    caixaPerguntas.textContent = "O veredito da sua jornada..."; 
+    textoResultado.textContent = historiaFinal + "\n\nConclusão: Seja você um entusiasta do progresso digital ou um defensor cauteloso da privacidade, a Inteligência Artificial veio para redesenhar o nosso cotidiano. Longe de ser apenas ficção de cinema ou um bicho de sete cabeças, ela se manifesta de formas sutis no nosso dia a dia — do corretor ortográfico que antecipa nossas palavras às grandes plataformas que moldam nosso lazer e produtividade. O futuro não é sobre a tecnologia substituir o ser humano, mas sim sobre como escolhemos usar essa inteligência para somar, facilitar nossa rotina e expandir nossas capacidades. Continue explorando esse novo mundo com criticidade e inovação!\n\nParabéns por concluir a sua história! 🤖🚀"; 
+    caixaAlternativas.textContent = ""; 
 }
+
+// Faz o quiz começar a funcionar na tela
+mostraPergunta();
 
 let historiaFinal = "";
 function respostaSelecionada(opcaoSelecionada) {
