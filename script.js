@@ -9,6 +9,7 @@ const pergunta2 = "Na escola ou no trabalho, você precisa entregar um projeto c
 const pergunta3 = "No tempo livre, você percebe que os algoritmos de recomendação do Spotify e da Netflix conhecem seus gostos perfeitamente. O que você faz?";
 const pergunta4 = "Em uma feira de tecnologia, você vê uma armadura inteligente com um assistente virtual integrado (estilo J.A.R.V.I.S.). Qual o seu pensamento sobre o futuro da robótica?";
 const pergunta5 = "No fim das contas, você precisa definir o papel da Inteligência Artificial no mundo. Qual caminho você defende?";
+
 const perguntas = [ 
     { 
         enunciado: "Você acorda no ano de 2040 e percebe que sua casa está totalmente automatizada por uma Inteligência Artificial. Qual é a sua primeira reação com essa nova rotina?", 
@@ -27,7 +28,7 @@ const perguntas = [
     { 
         enunciado: "No tempo livre, você percebe que os algoritmos de recomendação do Spotify e da Netflix conhecem seus gostos perfeitamente. O que você faz?", 
         alternativas: [ 
-            { texto: "A) Sigo as sugestões da tela, confiando no sistema para descobrir novas músicas e filmes.", afirmacao: "Na hora do lazer, permitiu que os algoritmos de recomendação expandissem seus horizontes culturais." }, 
+            { texto: "A) Sigo as sugestões da tela, confiando no system para descobrir novas músicas e filmes.", afirmacao: "Na hora do lazer, permitiu que os algoritmos de recomendação expandissem seus horizontes culturais." }, 
             { texto: "B) Ignoro a lista automática e busco indicações diretamente com amigos e criadores independentes.", afirmacao: "Nas pausas, preferiu a curadoria humana e o boca a boca, evitando ficar preso em uma bolha de algoritmos." } 
         ], 
     }, 
@@ -49,7 +50,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
-let hitoriaFinal = "";
+let historiaFinal = "";
 
 function mostraPergunta() {
   if (atual >= perguntas.length) {
@@ -66,17 +67,14 @@ function mostraAlternativas() {
   for (const alternativa of perguntaAtual.alternativas) {
     const botaoAlternativa = document.createElement("button");
     botaoAlternativa.textContent = alternativa.texto;
-    botaoAlternativa.addEventListener("click", () => respostaSelecionada(opcao));{
-      atual++;
-      mostraPergunta();
-    })
-    caixaAlternativas.appendChild(botaoAlternativas);
+    botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
+    caixaAlternativas.appendChild(botaoAlternativa);
   }
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-  const afirmacoes = opcaoSelecionada.afirmacoes;
-  historiaFinal += afirmacoes + " ";
+  const afirmacao = opcaoSelecionada.afirmacao;
+  historiaFinal += afirmacao + " ";
   atual++;
   mostraPergunta();
 }
@@ -89,11 +87,3 @@ function mostraResultado() {
 
 // Faz o quiz começar a funcionar na tela
 mostraPergunta();
-
-let historiaFinal = "";
-function respostaSelecionada(opcaoSelecionada) {
-  const afirmacao = opcaoSelecionada.afirmacao;
-  historiaFinal += afirmacao + " ";
-  atual++;
-  mostraPergunta();
-}
