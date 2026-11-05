@@ -4,12 +4,6 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const pergunta1 = "Você acorda no ano de 2040 e percebe que sua casa está totalmente automatizada por uma Inteligência Artificial. Qual é a sua primeira reação com essa nova rotina?";
-const pergunta2 = "Na escola ou no trabalho, você precisa entregar um projeto complexo até o fim do dia. Como decide utilizar as IAs generativas disponíveis?";
-const pergunta3 = "No tempo livre, você percebe que os algoritmos de recomendação do Spotify e da Netflix conhecem seus gostos perfeitamente. O que você faz?";
-const pergunta4 = "Em uma feira de tecnologia, você vê uma armadura inteligente com um assistente virtual integrado (estilo J.A.R.V.I.S.). Qual o seu pensamento sobre o futuro da robótica?";
-const pergunta5 = "No fim das contas, você precisa definir o papel da Inteligência Artificial no mundo. Qual caminho você defende?";
-
 const perguntas = [ 
     { 
         enunciado: "Você acorda no ano de 2040 e percebe que sua casa está totalmente automatizada por uma Inteligência Artificial. Qual é a sua primeira reação com essa nova rotina?", 
@@ -28,7 +22,7 @@ const perguntas = [
     { 
         enunciado: "No tempo livre, você percebe que os algoritmos de recomendação do Spotify e da Netflix conhecem seus gostos perfeitamente. O que você faz?", 
         alternativas: [ 
-            { texto: "A) Sigo as sugestões da tela, confiando no system para descobrir novas músicas e filmes.", afirmacao: "Na hora do lazer, permitiu que os algoritmos de recomendação expandissem seus horizontes culturais." }, 
+            { texto: "A) Sigo as sugestões da tela, confiando no sistema para descobrir novas músicas e filmes.", afirmacao: "Na hora do lazer, permitiu que os algoritmos de recomendação expandissem seus horizontes culturais." }, 
             { texto: "B) Ignoro a lista automática e busco indicações diretamente com amigos e criadores independentes.", afirmacao: "Nas pausas, preferiu a curadoria humana e o boca a boca, evitando ficar preso em uma bolha de algoritmos." } 
         ], 
     }, 
@@ -81,9 +75,8 @@ function respostaSelecionada(opcaoSelecionada) {
 
 function mostraResultado() { 
     caixaPerguntas.textContent = "O veredito da sua jornada..."; 
-    textoResultado.textContent = historiaFinal + "\n\nConclusão: Seja você um entusiasta do progresso digital ou um defensor cauteloso da privacidade, a Inteligência Artificial veio para redesenhar o nosso cotidiano. Longe de ser apenas ficção de cinema ou um bicho de sete cabeças, ela se manifesta de formas sutis no nosso dia a dia — do corretor ortográfico que antecipa nossas palavras às grandes plataformas que moldam nosso lazer e produtividade. O futuro não é sobre a tecnologia substituir o ser humano, mas sim sobre como escolhemos usar essa inteligência para somar, facilitar nossa rotina e expandir nossas capacidades. Continue explorando esse novo mundo com criticidade e inovação!\n\nParabéns por concluir a sua história! 🤖🚀"; 
+    textoResultado.textContent = historiaFinal + "\n\nConclusão: Seja você um entusiasta do progresso digital ou um defensor cauteloso da privacidade, a Inteligência Artificial veio para redesenhar o nosso cotidiano. Longe de ser apenas ficção de cinema ou um bicho de sete cabeças, ela se manifesta de formas sutis no nosso dia a dia. O futuro não é sobre a tecnologia substituir o ser humano, mas sim sobre como escolhemos usar essa inteligência para somar e expandir nossas capacidades. Continue explorando esse novo mundo com criticidade!\n\nParabéns por concluir a sua história! 🤖🚀"; 
     caixaAlternativas.textContent = ""; 
 }
 
-// Faz o quiz começar a funcionar na tela
 mostraPergunta();
