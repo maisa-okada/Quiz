@@ -9,19 +9,60 @@
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
+  font-family: sans-serif; /* Adicionado para deixar a fonte mais limpa */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0; /* Remove margens padrão do navegador */
 }
 
 .caixa-principal {
   background-color: var(--cor-principal);
   width: 90%;
+  max-width: 600px; /* Evita que a caixa fique gigante em telas de PC */
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 8px; /* Deixa os cantos da caixa suavemente arredondados */
+  border: 1px solid var(--cor-secundaria); /* Cria uma borda sutil */
 }
 
 h1 {
   color: var(--cor-destaque);
+  margin-bottom: 20px;
+}
+
+.caixa-perguntas {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Estilização para os botões de alternativas criados pelo JavaScript */
+.caixa-alternativas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Dá espaço entre um botão e outro */
+}
+
+button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-destaque);
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+button:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo); /* Inverte as cores quando o usuário passa o mouse */
+}
+
+/* Espaçamento para o texto do resultado final */
+.texto-resultado {
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap; /* Garante que as quebras de linha (\n) do JS funcionem */
 }
